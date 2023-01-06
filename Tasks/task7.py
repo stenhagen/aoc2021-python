@@ -13,7 +13,7 @@ def calculateFuelWeighted(orignalPositions, aligningPosition):
     return np.sum(weightedDiffArray)
 
 def run7a():
-    input = taskHelper.readFile('Data\\data7.txt')[0]
+    input = taskHelper.readFile('Data/data7.txt')[0]
     pattern = r'\d+'
     inputPositions = np.array([int(p) for p in re.findall(pattern, input)])
     numberOfElements = np.shape(inputPositions)[0]
@@ -32,7 +32,7 @@ def run7a():
             print(totalFuel)
 
 def run7b():
-    input = taskHelper.readFile('Data\\data7.txt')[0]
+    input = taskHelper.readFile('Data/data7.txt')[0]
     pattern = r'\d+'
     inputPositions = np.array([int(p) for p in re.findall(pattern, input)])
     canidateAligners = range(np.amin(inputPositions), np.amax(inputPositions) + 1)

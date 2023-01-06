@@ -6,7 +6,7 @@ def flipBit(b):
     return '1' if b == '0' else '0'
 
 def run3a():
-    codes = taskHelper.readFile('Data\\data3.txt')
+    codes = taskHelper.readFile('Data/data3.txt')
     codeLength = len(codes[0])
     gammaString = ''
     for pos in range(0, codeLength - 1):
@@ -37,7 +37,7 @@ def filterCodesForBit(codes, bitPosition, searchMostCommon, bitIfTied):
 
 
 def run3b():
-    codes = taskHelper.readFile('Data\\data3.txt')
+    codes = taskHelper.readFile('Data/data3.txt')
     codeLength = len(codes[0])
     oxygenCodes = codes
     for pos in range(0, codeLength - 1):

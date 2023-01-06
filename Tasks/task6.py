@@ -1,7 +1,7 @@
 import Helpers.taskHelper as taskHelper
 
 def run6a():
-    data = taskHelper.readFile('Data\\data6.txt')
+    data = taskHelper.readFile('Data/data6.txt')
     reproductionSchema = [int(d) for d in data[0].split(',')]
     
     startValue = 8
@@ -38,7 +38,7 @@ def getFullReproduction(initialReproductionTime, numberOfDays, startValue, resta
     return len(reproductionSchema)
 
 def run6b():
-    data = taskHelper.readFile('Data\\data6.txt')
+    data = taskHelper.readFile('Data/data6.txt')
     reproductionSchema = [int(d) for d in data[0].split(',')]
     startValue = 8
     restartValue = 6

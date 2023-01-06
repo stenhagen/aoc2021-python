@@ -85,7 +85,7 @@ def numberOfDangerPoints(diagram, dangerLimit):
     return len(np.where(diagram >= dangerLimit)[0])  
 
 def run5a():
-    lines = taskHelper.readFile('Data\\data5.txt')
+    lines = taskHelper.readFile('Data/data5.txt')
     linePairs = [createLine(l) for l in lines]
     oneDimFiltered = [pair for pair in linePairs if pair[0,0,0] == pair[1,0,0] or pair[0,1,0] == pair[1,1,0]]
     pairsArray = oneDimFiltered[0]
@@ -99,7 +99,7 @@ def run5a():
     print(numberOfDangerPoints(diagram, 2))
 
 def run5b():
-    lines = taskHelper.readFile('Data\\data5.txt')
+    lines = taskHelper.readFile('Data/data5.txt')
     linePairs = [createLine(l) for l in lines]
     pairsArray = linePairs[0]
     for p in linePairs[1:]:

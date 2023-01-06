@@ -8,7 +8,7 @@ def getProjectRoot():
     fileRoot = os.path.dirname(os.path.abspath(__file__))
     projectDir = 'aoc2021-python'
     pathLength = fileRoot.find(projectDir) + len(projectDir)  # The start of ProjectDir + lengt of projectDir
-    projectRoot = fileRoot[0:pathLength] + '\\'
+    projectRoot = fileRoot[0:pathLength]
     return projectRoot
 
 def readFile(pathInProject): 

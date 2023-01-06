@@ -15,7 +15,7 @@ def setNewPosition_a(currentPosition, commandStep):
     return currentPosition
 
 def run2a(): 
-    commandsRaw = taskHelper.readFile('Data\\data2.txt')
+    commandsRaw = taskHelper.readFile('Data/data2.txt')
     commandSteps = list(map(interpretCommand, commandsRaw))
     position = {'horizontal': 0, 'vertical': 0}
     for cmd in commandSteps:
@@ -35,7 +35,7 @@ def setNewPosition_b(currentPosition, commandStep):
     return currentPosition
 
 def run2b():
-    commandsRaw = taskHelper.readFile('Data\\data2.txt')
+    commandsRaw = taskHelper.readFile('Data/data2.txt')
     commandSteps = list(map(interpretCommand, commandsRaw))
     position = {'horizontal': 0, 'vertical': 0, 'aim': 0}
     for cmd in commandSteps:

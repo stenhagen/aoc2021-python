@@ -28,7 +28,7 @@ def calculateResult(board, lastDraw):
     return nonCrossedSum * lastDraw
 
 def run4a():
-    input = taskHelper.readFile("Data\\data4.txt")
+    input = taskHelper.readFile("Data/data4.txt")
     inputAsFullString = ''.join(line for line in input)
     splits = inputAsFullString.split("\n\n")
     drawString = splits[0]
@@ -53,7 +53,7 @@ def run4a():
     print(result)
 
 def run4b():
-    input = taskHelper.readFile("Data\\data4.txt")
+    input = taskHelper.readFile("Data/data4.txt")
     inputAsFullString = ''.join(line for line in input)
     splits = inputAsFullString.split("\n\n")
     drawString = splits[0]

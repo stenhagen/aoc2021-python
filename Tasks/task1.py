@@ -1,7 +1,7 @@
 import Helpers.taskHelper as taskHelper
 
 def run1a(): 
-    depthMeasurements_str = taskHelper.readFile('Data\\data1.txt')
+    depthMeasurements_str = taskHelper.readFile('Data/data1.txt')
     depthMeasurements = list(map(lambda s: int(s), depthMeasurements_str))
     increasingCounter = 0
     for idx, depth in enumerate(depthMeasurements[1:]):
@@ -13,7 +13,7 @@ def run1b():
     def getSum(l, idx):
         return sum(l[idx : idx + 3])
 
-    depthMeasurements_str = taskHelper.readFile('Data\\data1.txt')
+    depthMeasurements_str = taskHelper.readFile('Data/data1.txt')
     depthMeasurements = list(map(lambda s: int(s), depthMeasurements_str))
     increasingCounter = 0
     for idx, depth in enumerate(depthMeasurements[0:-2]):

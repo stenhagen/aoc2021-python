@@ -34,14 +34,14 @@ def calcNumberOfDigitsWithNSegments(valuesArray, n):
     return matches
 
 def run8a():
-    wiringSchema = taskHelper.readFile('Data\\data8.txt')
+    wiringSchema = taskHelper.readFile('Datadata8.txt')
     actualValues = [valueSequence.split("|")[1] for valueSequence in wiringSchema]
     digitsOfInterest = [1, 4, 7, 8] # According to input
     sumOfInterestingDigits = sum([calcNumberOfDigitsWithNSegments(actualValues, numberOfSegmentsDict[v]) for v in digitsOfInterest])
     print(sumOfInterestingDigits) 
         
 def run8b():
-    wiringSchema = taskHelper.readFile('Data\\data8.txt')
+    wiringSchema = taskHelper.readFile('Datadata8.txt')
     mappingSchema = [valueSequence.split("|")[0] for valueSequence in wiringSchema]
     actualValues = [valueSequence.split("|")[1] for valueSequence in wiringSchema]
     digitPattern = r'[a-g]{2,7}'
