@@ -9,14 +9,22 @@ def interpretCommand(s):
 
 def setNewPosition_a(currentPosition, commandStep):
     match commandStep['command']:
-        case 'forward': currentPosition['horizontal'] = currentPosition['horizontal'] + int(commandStep['steps']) 
-        case 'up': currentPosition['vertical'] = currentPosition['vertical'] - int(commandStep['steps'])
-        case 'down': currentPosition['vertical'] = currentPosition['vertical'] + int(commandStep['steps'])
+        case 'forward': currentPosition['horizontal'] =\
+            currentPosition['horizontal'] + int(commandStep['steps']) 
+        case 'up': currentPosition['vertical'] =\
+            currentPosition['vertical'] - int(commandStep['steps'])
+        case 'down': currentPosition['vertical'] =\
+            currentPosition['vertical'] + int(commandStep['steps'])
     return currentPosition
 
 def run2a(): 
     commandsRaw = taskHelper.readFile('Data/data2.txt')
-    commandSteps = list(map(interpretCommand, commandsRaw))
+
+    # Convert commands to list of dictionaries with direction and stepsize 
+    commandSteps = list(map(interpretCommand, commandsRaw))  
+    
+    # Should be solved through recursion or other technique to keep
+    # readonly property of variables.  
     position = {'horizontal': 0, 'vertical': 0}
     for cmd in commandSteps:
         position = setNewPosition_a(position, cmd)
@@ -26,12 +34,17 @@ def run2a():
 def setNewPosition_b(currentPosition, commandStep):
     match commandStep['command']:
         case 'forward':
-            currentPosition['horizontal'] = currentPosition['horizontal'] + int(commandStep['steps'])
-            currentPosition['vertical'] = currentPosition['vertical'] + currentPosition['aim'] * int(commandStep['steps'])
+            currentPosition['horizontal'] =\
+                currentPosition['horizontal'] + int(commandStep['steps'])
+            currentPosition['vertical'] = \
+                currentPosition['vertical']\
+                + currentPosition['aim'] * int(commandStep['steps'])
         case 'up': 
-            currentPosition['aim'] = currentPosition['aim'] - int(commandStep['steps'])
+            currentPosition['aim'] =\
+                currentPosition['aim'] - int(commandStep['steps'])
         case 'down':
-            currentPosition['aim'] = currentPosition['aim'] + int(commandStep['steps'])
+            currentPosition['aim'] =\
+                currentPosition['aim'] + int(commandStep['steps'])
     return currentPosition
 
 def run2b():

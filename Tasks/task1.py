@@ -2,11 +2,17 @@ import Helpers.taskHelper as taskHelper
 
 def run1a(): 
     depthMeasurements_str = taskHelper.readFile('Data/data1.txt')
+
+    # Convert list of string to integers   
     depthMeasurements = list(map(lambda s: int(s), depthMeasurements_str))
-    increasingCounter = 0
+    
+    # Should be solved without increment, through recursion or zipping
+    # two copies of depthMeasurements with one position of shift.    
+    increasingCounter = 0  
     for idx, depth in enumerate(depthMeasurements[1:]):
         if depth > depthMeasurements[idx]:
             increasingCounter += 1
+    
     print(increasingCounter)        
         
 def run1b():
