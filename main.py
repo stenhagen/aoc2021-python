@@ -8,7 +8,8 @@ def main() -> int:
     pattern = r'\d{1,2}[ab]'
     continueRunning = True
     while continueRunning != None:
-        taskIdentifier = input("What task would you like to run. Examples: 4a, 12b. End session by some other string: ")
+        taskIdentifier = input("What task would you like to run.\
+            Examples: 4a, 12b. End session by some other string: ")
         continueRunning = re.fullmatch(pattern, taskIdentifier)
         if not(continueRunning):
             print("Bye Bye!")

@@ -97,7 +97,7 @@ def addLine(diagram, pair):
     # Not sure if the last dimension of numpy matrix stays or is 
     # removed when you slice to single index in that dimension.
     # Too lazy to find out, so made an if block with exceptions
-    # It will squeeze away the third diemnsion if it still exists.    
+    # It will squeeze away the third dimension if it still exists.    
     if len(pairShape) > 2:
         try:
             if pairShape[2] > 1:
