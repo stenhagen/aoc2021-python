@@ -7,6 +7,7 @@ import Tasks.task6 as task6
 import Tasks.task7 as task7
 import Tasks.task8 as task8
 import Tasks.task9 as task9
+import Tasks.task10 as task10
 
 
 tasks = {
@@ -27,7 +28,9 @@ tasks = {
     "8a": task8.run8a,
     "8b": task8.run8b,
     "9a": task9.run9a,
-    "9b": task9.run9b
+    "9b": task9.run9b,
+    "10a": task10.run10a,
+    "10b": task10.run10b,
 }
 
 def taskExists(k):
